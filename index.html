@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<!-- <script type="text/javascript" src="js/music.js"></script> -->
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<title>Antriksh Agarwal - University of Texas, Dallas</title>
+	<script type="text/javascript">
+
+		function getRandomArbitrary(i) {
+		    return Math.random() * (i) + 1;
+		}
+		
+		// var css = ["",'global.css','index.css']
+		// // for(i=0;i<list.length;i++){
+		// d3.select("head").data(css)
+		// 	.enter().append('link')
+		// 	.attr('rel', 'stylesheet')
+		// 	.attr('href',function(d, i){
+		// 		console.log(d)
+		// 		name = "css/"+d+"?v="+getRandomArbitrary(i);
+		// 		return name;
+		// 	});
+
+		var js = ["",'music.js']
+		// for(i=0;i<list.length;i++){
+		d3.select("head").data(js)
+			.enter().append('script')
+			.attr('src',function(d, i){
+				name = "js/"+d+"?v="+getRandomArbitrary(i);
+				return name;
+			});
+		// }
+	</script>
+</head>
+<body>
+
+  <p>Header...</p>
+
+  <p>...Footer</p>
+
+</body>
+</html>
